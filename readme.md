@@ -23,8 +23,10 @@ You need to have **Racket** installed on your system. You can download it from t
 
 No special installation is required. Simply clone the repository to your local machine:
 
+```bash
 git clone https://github.com/lorenzodantonio/identicon-rkt.git
 cd identicon-rkt
+```
 
 ---
 
@@ -32,7 +34,9 @@ cd identicon-rkt
 
 Run the program from your terminal and pass a string as an argument.
 
+```bash
 racket main.rkt "hello world"
+```
 
 This command will generate an identicon for "hello world" and save it as `hello world.svg` in the `output/` directory.
 
@@ -40,5 +44,5 @@ This command will generate an identicon for "hello world" and save it as `hello 
 The program will generate images similar to these:
 
 ![foo](examples/qux.svg)
-![eggs](examples/ellie.svg)
+![ellie](examples/ellie.svg)
 ![spam](examples/foo.svg)
