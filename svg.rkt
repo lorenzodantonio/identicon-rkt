@@ -3,9 +3,6 @@
 (provide svg-rect
          svg-content)
 
-(provide svg-rect
-         svg-content)
-
 (define (svg-rect x y width height color)
   (let ([r (vector-ref color 0)]
         [g (vector-ref color 1)]
