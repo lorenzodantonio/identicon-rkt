@@ -42,14 +42,14 @@
 (define (build-svg grid color)
   (svg-content image-len
                image-len
-               (apply string-append
-                      (map (lambda (p)
-                             (svg-rect (* unit-len (modulo (second p) 5))
-                                       (* unit-len (quotient (second p) 5))
-                                       unit-len
-                                       unit-len
-                                       color))
-                           grid))))
+               (string-join (map (lambda (p)
+                                   (svg-rect (* unit-len (modulo (second p) 5))
+                                             (* unit-len (quotient (second p) 5))
+                                             unit-len
+                                             unit-len
+                                             color))
+                                 grid)
+                            "\n")))
 
 (define (save-to-file svg-content file-name output-dir)
   (let ([img-path (build-path output-dir (string-append file-name ".svg"))])
